@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{enumitem} % customization of lists
+\usepackage{ragged2e} % text alignment
+\usepackage{graphicx} % ability to insert images
+\usepackage{times} % Times New Roman font
+\usepackage[none]{hyphenat} % prevents hyphenation
+\usepackage[margin=1in]{geometry} % set overall margins
+\usepackage{caption} % captions for pictures
+\usepackage{float} % make the image float 
+\usepackage{hyperref}
+ % sets the document margins
+ \renewcommand{\contentsname}{Sisukord}
+\renewcommand{\listfigurename}{Piltide loend}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+%
+\captionsetup[figure]{name=Pilt, font=it} % changes the default "Figure 1" name to "Pilt 1"
+\begin{document}
+\RaggedRight
+\justifying
+\input{Misc/commands}
+\input{Misc/titlePage}
+%
+\tableofcontents{name=Sisukord}
+\newpage
+%
+\input{Misc/terms}
+\input{theory}
+\input{practical}
+\input{conclusion}
+\input{Misc/sources}
+\listoffigures 
+\vfill
+\begin{center}
+Dokument oli tehtud \LaTeX-i abil
+\end{center}
+\end{document}
